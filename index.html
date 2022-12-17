@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive reloj Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">
+            <i class="bx bxs-timer"></i>Reloj
+        </a>
+        <ul class="navbar">
+            <li><a href="#" class="active">Visión general</a></li>
+            <li><a href="#">Enseñar especificaciones</a></li>
+            <li><a href="#">Reseñas</a></li>
+            <li><a href="#">Contáctanos </a></li>
+        </ul>
+        <div class="header-icons">
+            <i class='bx bx-cart-add'></i>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+
+    <!-- home -->
+    <section class="home">
+        <div class="home-img">
+            <img src="assets/img/product1.png" a alt="product" class="one">
+        </div>
+        <div class="home-text">
+            <h1>relojes <br> Inteligentes </h1>
+            <h5>Nuevos modelos pensados para ti</h5>
+            <h3> $ 450.99</h3>
+            <a href="#" class="btn">Comprar ahora</a>
+        </div>
+    </section>
+
+
+    <!-- main -->
+    <div class="main">
+        <div class="row">
+            <li>
+                <img src="/assets/img/main1.png" onclick="slider('/assets/img/product1.png  ')" alt="prodcut-1">
+            </li>
+        </div>
+        <div class="row row2">
+            <li>
+                <img src="/assets/img/main2.png" onclick="slider('/assets/img/product2.png  ')" alt="prodcut-1">
+            </li>
+        </div>
+        <div class="row row3">
+            <li>
+                <img src="/assets/img/main3.png" onclick="slider('/assets/img/product3.png  ')" alt="prodcut-1">
+            </li>
+        </div>
+    </div>
+
+
+
+    <!-- script -->
+    <script type="text/javascript">
+        function slider(anything) {
+            document.querySelector('.one').src = anything;
+        };
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+</html>
